@@ -1,0 +1,2605 @@
+[
+    {
+        "id": "1c3a74e9f05268d9",
+        "type": "tab",
+        "label": "Wallbox Ladesteuerung",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "a32415fef288881d",
+        "type": "group",
+        "z": "1c3a74e9f05268d9",
+        "name": "Laden beenden",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "4f98ec3a7896becb",
+            "555da9d63e64788b",
+            "745e592996a8907d",
+            "468a9f1e1c5ad905",
+            "945de5a7a1849266",
+            "9d4db56db942f3a5",
+            "9a6fe14b6fa03736",
+            "bbc5a7480987eb1b",
+            "83aac925af65bf77"
+        ],
+        "x": 34,
+        "y": 919,
+        "w": 1352,
+        "h": 142
+    },
+    {
+        "id": "35fbe1be8fd72ac9",
+        "type": "group",
+        "z": "1c3a74e9f05268d9",
+        "name": "PV Überschuss prüfen",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "872a50197782b1ec",
+            "408a3494a3305037",
+            "88327d287e4fc16a",
+            "0be7c11c13fac99e",
+            "a90078d9bb68294f",
+            "4e980b7707109737"
+        ],
+        "x": 34,
+        "y": 179,
+        "w": 1352,
+        "h": 122
+    },
+    {
+        "id": "689da39e71c52433",
+        "type": "group",
+        "z": "1c3a74e9f05268d9",
+        "name": "Initialisierung",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "c3a359a847d32b23",
+            "a44b7387e5b33002",
+            "13f5da82e65f7833",
+            "788e3018a84caba9",
+            "a4ca9dd3deee5c3f",
+            "3a588aebba0a90a3",
+            "a92a724ccd7e64ed",
+            "e8c385fb9c3df51b",
+            "7017d2e891f870fa",
+            "aba1af03cc79263d",
+            "89012a46ab4da8e1",
+            "965490a5ab24c3c7",
+            "5d8faf8b9a172db6"
+        ],
+        "x": 34,
+        "y": 19,
+        "w": 1352,
+        "h": 142
+    },
+    {
+        "id": "1c994742312f3118",
+        "type": "group",
+        "z": "1c3a74e9f05268d9",
+        "name": "Dyn. Überschuss Schwellwert kalkulieren und setzen",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "976cbbd8f11e5470",
+            "41803e7b242ec4f3",
+            "5a627047d8df2a55",
+            "b58d83994f3717c9",
+            "12fde68b2d148ea3",
+            "89b07626ec926b48",
+            "175dcbb77a0ed7e5",
+            "a25a0520c3a7e2a4",
+            "ebd99c8b044e88b2",
+            "14bb34c097ef7efd"
+        ],
+        "x": 34,
+        "y": 1079,
+        "w": 1352,
+        "h": 162
+    },
+    {
+        "id": "3304eb7deea877f7",
+        "type": "group",
+        "z": "1c3a74e9f05268d9",
+        "name": "Ladekontrolle - Prüfen ob geladen werden soll",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "32dcbe63960cd767",
+            "149d622f20f6ea1d",
+            "32fdc5d1c4be0dc1",
+            "f692d396c9fa36b0",
+            "3b1e1e663d09e501",
+            "c5db831d5180d2ea",
+            "9be1bf345e520b14",
+            "cfecb8876f0e7e73",
+            "83a919a13d26b56d",
+            "4cfef882b61592bf",
+            "43122deddaf64184",
+            "1472cb4b96a0eed5",
+            "74f81e8f24c74428",
+            "0e7abc553fdac08e",
+            "e49a6832035a4b45",
+            "fcd8de0c5ee88fea",
+            "1a72580793177b62",
+            "6ead64dedc3568b9",
+            "39d857b39d040c98"
+        ],
+        "x": 34,
+        "y": 319,
+        "w": 1352,
+        "h": 322
+    },
+    {
+        "id": "68cc5502cd5eb866",
+        "type": "group",
+        "z": "1c3a74e9f05268d9",
+        "name": "Laden starten - Charge Rate setzen",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "50306eebba2847ad",
+            "6ee0d5176d522dfb",
+            "77b8c36cf02810c4",
+            "b92a55df30e6ae1a",
+            "649241dc69dec3da",
+            "900c398447f054e6",
+            "056e062ef51ef86c",
+            "9e1e5f11813e26db",
+            "cb2b19ee03cfdec5"
+        ],
+        "x": 34,
+        "y": 659,
+        "w": 1352,
+        "h": 142
+    },
+    {
+        "id": "f8b977b19ccfa829",
+        "type": "group",
+        "z": "1c3a74e9f05268d9",
+        "name": "Scheduled Loading",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "628ba2e9d38d3f6a",
+            "0df17852a5439594",
+            "19110540400eafcb",
+            "6191b4229d574023"
+        ],
+        "x": 34,
+        "y": 819,
+        "w": 832,
+        "h": 82
+    },
+    {
+        "id": "c3a359a847d32b23",
+        "type": "poll-state",
+        "z": "1c3a74e9f05268d9",
+        "g": "689da39e71c52433",
+        "name": "Charging State",
+        "server": "5828c80558a7bba6",
+        "version": 3,
+        "exposeAsEntityConfig": "",
+        "updateInterval": "10",
+        "updateIntervalType": "num",
+        "updateIntervalUnits": "seconds",
+        "outputInitially": false,
+        "outputOnChanged": false,
+        "entityId": "sensor.esp_evcc_charging_state",
+        "stateType": "num",
+        "ifState": "",
+        "ifStateType": "str",
+        "ifStateOperator": "does_not_include",
+        "outputs": 1,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entity"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "triggerId"
+            }
+        ],
+        "x": 140,
+        "y": 60,
+        "wires": [
+            [
+                "13f5da82e65f7833"
+            ]
+        ]
+    },
+    {
+        "id": "a44b7387e5b33002",
+        "type": "api-current-state",
+        "z": "1c3a74e9f05268d9",
+        "g": "689da39e71c52433",
+        "name": "Current Feed",
+        "server": "5828c80558a7bba6",
+        "version": 3,
+        "outputs": 1,
+        "halt_if": "",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "entity_id": "sensor.esp_heizungunten_current_energy",
+        "state_type": "num",
+        "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entity"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "stateinfo",
+                "valueType": "str"
+            },
+            {
+                "property": "parts.index",
+                "propertyType": "msg",
+                "value": "0",
+                "valueType": "num"
+            },
+            {
+                "property": "parts.id",
+                "propertyType": "msg",
+                "value": "stateinfo",
+                "valueType": "str"
+            },
+            {
+                "property": "parts.count",
+                "propertyType": "msg",
+                "value": "2",
+                "valueType": "num"
+            }
+        ],
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "override_topic": false,
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "x": 490,
+        "y": 60,
+        "wires": [
+            [
+                "a4ca9dd3deee5c3f"
+            ]
+        ]
+    },
+    {
+        "id": "32dcbe63960cd767",
+        "type": "api-current-state",
+        "z": "1c3a74e9f05268d9",
+        "g": "3304eb7deea877f7",
+        "name": "BMW Akku",
+        "server": "5828c80558a7bba6",
+        "version": 3,
+        "outputs": 1,
+        "halt_if": "",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "entity_id": "sensor.ix3_m_sport_verbleibende_batterie_in_prozent",
+        "state_type": "num",
+        "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entity"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "akkuinfo",
+                "valueType": "str"
+            },
+            {
+                "property": "parts.index",
+                "propertyType": "msg",
+                "value": "1",
+                "valueType": "num"
+            },
+            {
+                "property": "parts.id",
+                "propertyType": "msg",
+                "value": "akkuinfo",
+                "valueType": "str"
+            },
+            {
+                "property": "parts.count",
+                "propertyType": "msg",
+                "value": "5",
+                "valueType": "num"
+            }
+        ],
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "override_topic": false,
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "x": 290,
+        "y": 420,
+        "wires": [
+            [
+                "c5db831d5180d2ea"
+            ]
+        ]
+    },
+    {
+        "id": "149d622f20f6ea1d",
+        "type": "api-current-state",
+        "z": "1c3a74e9f05268d9",
+        "g": "3304eb7deea877f7",
+        "name": "Minimum Load",
+        "server": "5828c80558a7bba6",
+        "version": 3,
+        "outputs": 1,
+        "halt_if": "",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "entity_id": "input_number.untere_ladegrenze",
+        "state_type": "num",
+        "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entity"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "akkuinfo",
+                "valueType": "str"
+            },
+            {
+                "property": "parts.index",
+                "propertyType": "msg",
+                "value": "2",
+                "valueType": "num"
+            },
+            {
+                "property": "parts.id",
+                "propertyType": "msg",
+                "value": "akkuinfo",
+                "valueType": "str"
+            },
+            {
+                "property": "parts.count",
+                "propertyType": "msg",
+                "value": "5",
+                "valueType": "num"
+            }
+        ],
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "override_topic": false,
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "x": 300,
+        "y": 480,
+        "wires": [
+            [
+                "c5db831d5180d2ea"
+            ]
+        ]
+    },
+    {
+        "id": "13f5da82e65f7833",
+        "type": "switch",
+        "z": "1c3a74e9f05268d9",
+        "g": "689da39e71c52433",
+        "name": "4 to 7",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "btwn",
+                "v": "4",
+                "vt": "num",
+                "v2": "7",
+                "v2t": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 290,
+        "y": 120,
+        "wires": [
+            [
+                "e8c385fb9c3df51b",
+                "a44b7387e5b33002"
+            ]
+        ]
+    },
+    {
+        "id": "788e3018a84caba9",
+        "type": "api-current-state",
+        "z": "1c3a74e9f05268d9",
+        "g": "689da39e71c52433",
+        "name": "PV Overare Limit",
+        "server": "5828c80558a7bba6",
+        "version": 3,
+        "outputs": 1,
+        "halt_if": "",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "entity_id": "input_number.pv_uberschuss_schwellwert",
+        "state_type": "num",
+        "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entity"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "stateinfo",
+                "valueType": "str"
+            },
+            {
+                "property": "parts.index",
+                "propertyType": "msg",
+                "value": "1",
+                "valueType": "num"
+            },
+            {
+                "property": "parts.id",
+                "propertyType": "msg",
+                "value": "stateinfo",
+                "valueType": "str"
+            },
+            {
+                "property": "parts.count",
+                "propertyType": "msg",
+                "value": "2",
+                "valueType": "num"
+            }
+        ],
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "override_topic": false,
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "x": 1070,
+        "y": 120,
+        "wires": [
+            [
+                "89012a46ab4da8e1"
+            ]
+        ]
+    },
+    {
+        "id": "a4ca9dd3deee5c3f",
+        "type": "function",
+        "z": "1c3a74e9f05268d9",
+        "g": "689da39e71c52433",
+        "name": "* -1",
+        "func": "msg.payload = msg.payload * -1;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 630,
+        "y": 60,
+        "wires": [
+            [
+                "3a588aebba0a90a3"
+            ]
+        ]
+    },
+    {
+        "id": "3a588aebba0a90a3",
+        "type": "join",
+        "z": "1c3a74e9f05268d9",
+        "g": "689da39e71c52433",
+        "name": "",
+        "mode": "auto",
+        "build": "array",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "accumulate": false,
+        "timeout": "",
+        "count": "2",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "",
+        "reduceFixup": "",
+        "x": 770,
+        "y": 60,
+        "wires": [
+            [
+                "7017d2e891f870fa"
+            ]
+        ]
+    },
+    {
+        "id": "4f98ec3a7896becb",
+        "type": "switch",
+        "z": "1c3a74e9f05268d9",
+        "g": "a32415fef288881d",
+        "name": "2 or 3",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "btwn",
+                "v": "2",
+                "vt": "num",
+                "v2": "3",
+                "v2t": "num"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 1,
+        "x": 290,
+        "y": 1020,
+        "wires": [
+            [
+                "9a6fe14b6fa03736"
+            ]
+        ],
+        "outputLabels": [
+            "No Vehicle plugged"
+        ]
+    },
+    {
+        "id": "555da9d63e64788b",
+        "type": "server-state-changed",
+        "z": "1c3a74e9f05268d9",
+        "g": "a32415fef288881d",
+        "name": "Charging State",
+        "server": "5828c80558a7bba6",
+        "version": 6,
+        "outputs": 1,
+        "exposeAsEntityConfig": "",
+        "entities": {
+            "entity": [
+                "sensor.esp_evcc_charging_state"
+            ],
+            "substring": [],
+            "regex": []
+        },
+        "outputInitially": false,
+        "stateType": "num",
+        "ifState": "",
+        "ifStateType": "num",
+        "ifStateOperator": "is",
+        "outputOnlyOnStateChange": true,
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "ignorePrevStateNull": false,
+        "ignorePrevStateUnknown": false,
+        "ignorePrevStateUnavailable": false,
+        "ignoreCurrentStateUnknown": false,
+        "ignoreCurrentStateUnavailable": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "eventData"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "triggerId"
+            }
+        ],
+        "x": 140,
+        "y": 1020,
+        "wires": [
+            [
+                "4f98ec3a7896becb"
+            ]
+        ]
+    },
+    {
+        "id": "a92a724ccd7e64ed",
+        "type": "comment",
+        "z": "1c3a74e9f05268d9",
+        "g": "689da39e71c52433",
+        "name": "",
+        "info": "https://www.amperfied.de/wp-content/uploads/2022/06/ModBus-Register-Tabelle.pdf\n\nCharging State:\n2: No Vehicle plugged, Wallbox doesn't allow charging\n3: No Vehicle plugged, Wallbox allows charging\n4: Vehicle plugged without charging request, Wallbox doesn't allow charging\n5: Vehicle plugged without charging request, Wallbox allows charging\n6: Vehicle plugged with charging request, Wallbox doesn't allow charging\n7: Vehicle plugged with charging request, Wallbox allows charging\n\nMercedes BMW ix3\n- lädt nur mit drei Phasen\n- Chargerate kann in 0,1A Schritten angepasst werden\n- 0,1 A entspricht 76W\n- 100 Watt sollen für Einspeisung überbleiben\n- Minimum Chargerate ist 6A\n- zukünftig dynamisches Umschalten von 1p/3p\n- \n\n",
+        "x": 1280,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "e8c385fb9c3df51b",
+        "type": "api-current-state",
+        "z": "1c3a74e9f05268d9",
+        "g": "689da39e71c52433",
+        "name": "Current Charge",
+        "server": "5828c80558a7bba6",
+        "version": 3,
+        "outputs": 1,
+        "halt_if": "",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "entity_id": "sensor.esp_heizungunten_wallbox_aktuelle_leistung",
+        "state_type": "num",
+        "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entity"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "stateinfo",
+                "valueType": "str"
+            },
+            {
+                "property": "parts.index",
+                "propertyType": "msg",
+                "value": "1",
+                "valueType": "num"
+            },
+            {
+                "property": "parts.id",
+                "propertyType": "msg",
+                "value": "stateinfo",
+                "valueType": "str"
+            },
+            {
+                "property": "parts.count",
+                "propertyType": "msg",
+                "value": "2",
+                "valueType": "num"
+            }
+        ],
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "override_topic": false,
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "x": 480,
+        "y": 120,
+        "wires": [
+            [
+                "5d8faf8b9a172db6"
+            ]
+        ]
+    },
+    {
+        "id": "7017d2e891f870fa",
+        "type": "calculator",
+        "z": "1c3a74e9f05268d9",
+        "g": "689da39e71c52433",
+        "name": "PV Overage",
+        "inputMsgField": "payload",
+        "outputMsgField": "payload",
+        "operation": "sum",
+        "constant": "",
+        "round": false,
+        "truncate": false,
+        "decimals": 0,
+        "decimals2": 0,
+        "x": 910,
+        "y": 60,
+        "wires": [
+            [
+                "aba1af03cc79263d",
+                "788e3018a84caba9"
+            ]
+        ]
+    },
+    {
+        "id": "aba1af03cc79263d",
+        "type": "change",
+        "z": "1c3a74e9f05268d9",
+        "g": "689da39e71c52433",
+        "name": "Add Msg Parts",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "stateinfo",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "parts.index",
+                "pt": "msg",
+                "to": "0",
+                "tot": "num"
+            },
+            {
+                "t": "set",
+                "p": "parts.id",
+                "pt": "msg",
+                "to": "stateinfo",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "parts.count",
+                "pt": "msg",
+                "to": "2",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1100,
+        "y": 60,
+        "wires": [
+            [
+                "89012a46ab4da8e1"
+            ]
+        ]
+    },
+    {
+        "id": "89012a46ab4da8e1",
+        "type": "join",
+        "z": "1c3a74e9f05268d9",
+        "g": "689da39e71c52433",
+        "name": "",
+        "mode": "auto",
+        "build": "array",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "accumulate": false,
+        "timeout": "",
+        "count": "2",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "",
+        "reduceFixup": "",
+        "x": 1250,
+        "y": 120,
+        "wires": [
+            [
+                "965490a5ab24c3c7"
+            ]
+        ]
+    },
+    {
+        "id": "872a50197782b1ec",
+        "type": "switch",
+        "z": "1c3a74e9f05268d9",
+        "g": "35fbe1be8fd72ac9",
+        "name": "PV Overage over Limit?",
+        "property": "payload[0]",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "lt",
+                "v": "payload[1]",
+                "vt": "msg"
+            },
+            {
+                "t": "gte",
+                "v": "payload[1]",
+                "vt": "msg"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 250,
+        "y": 220,
+        "wires": [
+            [
+                "4e980b7707109737"
+            ],
+            [
+                "408a3494a3305037"
+            ]
+        ],
+        "outputLabels": [
+            "Kein PV Überschuss",
+            "PV Überschuss"
+        ]
+    },
+    {
+        "id": "408a3494a3305037",
+        "type": "change",
+        "z": "1c3a74e9f05268d9",
+        "g": "35fbe1be8fd72ac9",
+        "name": "Set PV Overage Timestamp",
+        "rules": [
+            {
+                "t": "set",
+                "p": "PvOverage",
+                "pt": "flow",
+                "to": "",
+                "tot": "date"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 560,
+        "y": 260,
+        "wires": [
+            [
+                "4e980b7707109737"
+            ]
+        ]
+    },
+    {
+        "id": "88327d287e4fc16a",
+        "type": "function",
+        "z": "1c3a74e9f05268d9",
+        "g": "35fbe1be8fd72ac9",
+        "name": "In PV Overage Timewindow?",
+        "func": "// Output 1 -> Kein PV Überschuss\n// Output 2 -> PV Überschuss\n\nvar loadWindow = 15 * 60 * 1000; // 15 Minuten * 60 Sekunden * 1000\nvar lastPvOverageTimeStamp = flow.get(\"PvOverage\");\n\nif (Date.now() - lastPvOverageTimeStamp > loadWindow) {\n    msg.topic = \"Kein PV Überschuss\";\n    msg.payload = 0;\n} else {\n    msg.topic = \"PV Überschuss vorhanden\";\n}\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1140,
+        "y": 220,
+        "wires": [
+            [
+                "a90078d9bb68294f"
+            ]
+        ]
+    },
+    {
+        "id": "965490a5ab24c3c7",
+        "type": "link out",
+        "z": "1c3a74e9f05268d9",
+        "g": "689da39e71c52433",
+        "name": "link out 1",
+        "mode": "link",
+        "links": [
+            "0be7c11c13fac99e"
+        ],
+        "x": 1345,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "0be7c11c13fac99e",
+        "type": "link in",
+        "z": "1c3a74e9f05268d9",
+        "g": "35fbe1be8fd72ac9",
+        "name": "link in 1",
+        "links": [
+            "965490a5ab24c3c7"
+        ],
+        "x": 75,
+        "y": 220,
+        "wires": [
+            [
+                "872a50197782b1ec"
+            ]
+        ]
+    },
+    {
+        "id": "a90078d9bb68294f",
+        "type": "link out",
+        "z": "1c3a74e9f05268d9",
+        "g": "35fbe1be8fd72ac9",
+        "name": "Check for Charging",
+        "mode": "link",
+        "links": [
+            "32fdc5d1c4be0dc1"
+        ],
+        "x": 1345,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "32fdc5d1c4be0dc1",
+        "type": "link in",
+        "z": "1c3a74e9f05268d9",
+        "g": "3304eb7deea877f7",
+        "name": "Akku Check",
+        "links": [
+            "a90078d9bb68294f"
+        ],
+        "x": 75,
+        "y": 480,
+        "wires": [
+            [
+                "f692d396c9fa36b0",
+                "32dcbe63960cd767",
+                "149d622f20f6ea1d",
+                "83a919a13d26b56d",
+                "74f81e8f24c74428"
+            ]
+        ]
+    },
+    {
+        "id": "4e980b7707109737",
+        "type": "change",
+        "z": "1c3a74e9f05268d9",
+        "g": "35fbe1be8fd72ac9",
+        "name": "Forward PV Overage",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload[0]",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 860,
+        "y": 220,
+        "wires": [
+            [
+                "88327d287e4fc16a"
+            ]
+        ]
+    },
+    {
+        "id": "f692d396c9fa36b0",
+        "type": "change",
+        "z": "1c3a74e9f05268d9",
+        "g": "3304eb7deea877f7",
+        "name": "Add Msg Parts",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "akkuinfo",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "parts.index",
+                "pt": "msg",
+                "to": "0",
+                "tot": "num"
+            },
+            {
+                "t": "set",
+                "p": "parts.id",
+                "pt": "msg",
+                "to": "akkuinfo",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "parts.count",
+                "pt": "msg",
+                "to": "5",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 300,
+        "y": 360,
+        "wires": [
+            [
+                "c5db831d5180d2ea"
+            ]
+        ]
+    },
+    {
+        "id": "3b1e1e663d09e501",
+        "type": "switch",
+        "z": "1c3a74e9f05268d9",
+        "g": "3304eb7deea877f7",
+        "name": "Lower Akku Limit Check",
+        "property": "payload[1]",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "lt",
+                "v": "payload[2]",
+                "vt": "msg"
+            },
+            {
+                "t": "gte",
+                "v": "payload[2]",
+                "vt": "msg"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1170,
+        "y": 500,
+        "wires": [
+            [
+                "9be1bf345e520b14"
+            ],
+            [
+                "cfecb8876f0e7e73"
+            ]
+        ],
+        "outputLabels": [
+            "Unter Akku Schwellwert - Laden",
+            "Über Akku Schwellwert - Nicht Laden"
+        ]
+    },
+    {
+        "id": "c5db831d5180d2ea",
+        "type": "join",
+        "z": "1c3a74e9f05268d9",
+        "g": "3304eb7deea877f7",
+        "name": "",
+        "mode": "auto",
+        "build": "array",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "accumulate": false,
+        "timeout": "",
+        "count": "2",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "",
+        "reduceFixup": "",
+        "x": 550,
+        "y": 480,
+        "wires": [
+            [
+                "e49a6832035a4b45"
+            ]
+        ]
+    },
+    {
+        "id": "9be1bf345e520b14",
+        "type": "link out",
+        "z": "1c3a74e9f05268d9",
+        "g": "3304eb7deea877f7",
+        "name": "Laden - ohne PV",
+        "mode": "link",
+        "links": [
+            "b92a55df30e6ae1a"
+        ],
+        "x": 1345,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "cfecb8876f0e7e73",
+        "type": "link out",
+        "z": "1c3a74e9f05268d9",
+        "g": "3304eb7deea877f7",
+        "name": "Nicht laden",
+        "mode": "link",
+        "links": [
+            "468a9f1e1c5ad905"
+        ],
+        "x": 1345,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "468a9f1e1c5ad905",
+        "type": "link in",
+        "z": "1c3a74e9f05268d9",
+        "g": "a32415fef288881d",
+        "name": "Nicht laden",
+        "links": [
+            "cfecb8876f0e7e73",
+            "6ead64dedc3568b9"
+        ],
+        "x": 325,
+        "y": 960,
+        "wires": [
+            [
+                "9a6fe14b6fa03736"
+            ]
+        ]
+    },
+    {
+        "id": "745e592996a8907d",
+        "type": "api-call-service",
+        "z": "1c3a74e9f05268d9",
+        "g": "a32415fef288881d",
+        "name": "Stop Charging",
+        "server": "5828c80558a7bba6",
+        "version": 7,
+        "debugenabled": false,
+        "action": "input_number.set_value",
+        "floorId": [],
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "input_number.wb_max_current"
+        ],
+        "labelId": [],
+        "data": "{\"value\": $number(payload[0])}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "blockInputOverrides": false,
+        "domain": "input_number",
+        "service": "set_value",
+        "x": 1280,
+        "y": 1000,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "50306eebba2847ad",
+        "type": "link in",
+        "z": "1c3a74e9f05268d9",
+        "g": "68cc5502cd5eb866",
+        "name": "Laden - mit PV Überschuss",
+        "links": [
+            "1472cb4b96a0eed5"
+        ],
+        "x": 75,
+        "y": 700,
+        "wires": [
+            [
+                "6ee0d5176d522dfb"
+            ]
+        ]
+    },
+    {
+        "id": "83a919a13d26b56d",
+        "type": "api-current-state",
+        "z": "1c3a74e9f05268d9",
+        "g": "3304eb7deea877f7",
+        "name": "Maximum Load",
+        "server": "5828c80558a7bba6",
+        "version": 3,
+        "outputs": 1,
+        "halt_if": "",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "entity_id": "input_number.obere_ladegrenze",
+        "state_type": "num",
+        "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entity"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "akkuinfo",
+                "valueType": "str"
+            },
+            {
+                "property": "parts.index",
+                "propertyType": "msg",
+                "value": "3",
+                "valueType": "num"
+            },
+            {
+                "property": "parts.id",
+                "propertyType": "msg",
+                "value": "akkuinfo",
+                "valueType": "str"
+            },
+            {
+                "property": "parts.count",
+                "propertyType": "msg",
+                "value": "5",
+                "valueType": "num"
+            }
+        ],
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "override_topic": false,
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "x": 300,
+        "y": 540,
+        "wires": [
+            [
+                "c5db831d5180d2ea"
+            ]
+        ]
+    },
+    {
+        "id": "6ee0d5176d522dfb",
+        "type": "function",
+        "z": "1c3a74e9f05268d9",
+        "g": "68cc5502cd5eb866",
+        "name": "Calculate Charge Rate (PV)",
+        "func": "var currentFeed = msg.payload[0]; // Was aktuell eingespeist / verbraucht wird\nvar feedReserve = 100;\nvar minChargeRate = 60;\n\nvar newChargingInW = currentFeed - feedReserve;\nvar newChargeRate = parseInt(newChargingInW / 69);\n\nif (newChargeRate < 60) {\n    msg.payload = 60;\n} else if (newChargeRate > 160) {\n    msg.payload = 160;\n} else {\n    msg.payload = newChargeRate;\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 240,
+        "y": 700,
+        "wires": [
+            [
+                "900c398447f054e6",
+                "056e062ef51ef86c"
+            ]
+        ]
+    },
+    {
+        "id": "77b8c36cf02810c4",
+        "type": "api-call-service",
+        "z": "1c3a74e9f05268d9",
+        "g": "68cc5502cd5eb866",
+        "name": "Set Chargerate",
+        "server": "5828c80558a7bba6",
+        "version": 7,
+        "debugenabled": false,
+        "action": "input_number.set_value",
+        "floorId": [],
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "input_number.wb_max_current"
+        ],
+        "labelId": [],
+        "data": "{\"value\": $number(payload[0])}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "blockInputOverrides": false,
+        "domain": "input_number",
+        "service": "set_value",
+        "x": 1280,
+        "y": 760,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b92a55df30e6ae1a",
+        "type": "link in",
+        "z": "1c3a74e9f05268d9",
+        "g": "68cc5502cd5eb866",
+        "name": "Laden - mit PV Überschuss",
+        "links": [
+            "9be1bf345e520b14"
+        ],
+        "x": 75,
+        "y": 760,
+        "wires": [
+            [
+                "649241dc69dec3da"
+            ]
+        ]
+    },
+    {
+        "id": "649241dc69dec3da",
+        "type": "function",
+        "z": "1c3a74e9f05268d9",
+        "g": "68cc5502cd5eb866",
+        "name": "Std. Rate - Non PV",
+        "func": "msg.payload = 60;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 210,
+        "y": 760,
+        "wires": [
+            [
+                "900c398447f054e6",
+                "056e062ef51ef86c"
+            ]
+        ]
+    },
+    {
+        "id": "5d8faf8b9a172db6",
+        "type": "function",
+        "z": "1c3a74e9f05268d9",
+        "g": "689da39e71c52433",
+        "name": "* 1000",
+        "func": "msg.payload = msg.payload * 1000;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 630,
+        "y": 120,
+        "wires": [
+            [
+                "3a588aebba0a90a3"
+            ]
+        ]
+    },
+    {
+        "id": "4cfef882b61592bf",
+        "type": "switch",
+        "z": "1c3a74e9f05268d9",
+        "g": "3304eb7deea877f7",
+        "name": "Check PV Overage",
+        "property": "payload[0]",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "num"
+            },
+            {
+                "t": "gt",
+                "v": "0",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 930,
+        "y": 540,
+        "wires": [
+            [
+                "3b1e1e663d09e501"
+            ],
+            [
+                "43122deddaf64184"
+            ]
+        ],
+        "outputLabels": [
+            "Kein PV",
+            "PV Überschuss vorhanden"
+        ]
+    },
+    {
+        "id": "43122deddaf64184",
+        "type": "switch",
+        "z": "1c3a74e9f05268d9",
+        "g": "3304eb7deea877f7",
+        "name": "Upper Akku Limit Check",
+        "property": "payload[1]",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "gte",
+                "v": "payload[3]",
+                "vt": "msg"
+            },
+            {
+                "t": "lt",
+                "v": "payload[3]",
+                "vt": "msg"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1170,
+        "y": 580,
+        "wires": [
+            [
+                "cfecb8876f0e7e73"
+            ],
+            [
+                "1472cb4b96a0eed5"
+            ]
+        ],
+        "outputLabels": [
+            "Über Akku Schwellwert - Nicht Laden",
+            "Unter Akku Schwellwert - Laden"
+        ]
+    },
+    {
+        "id": "1472cb4b96a0eed5",
+        "type": "link out",
+        "z": "1c3a74e9f05268d9",
+        "g": "3304eb7deea877f7",
+        "name": "Laden - mit PV",
+        "mode": "link",
+        "links": [
+            "50306eebba2847ad"
+        ],
+        "x": 1345,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "976cbbd8f11e5470",
+        "type": "calculator",
+        "z": "1c3a74e9f05268d9",
+        "g": "1c994742312f3118",
+        "name": "- Limit",
+        "inputMsgField": "payload",
+        "outputMsgField": "payload",
+        "operation": "sub",
+        "constant": "",
+        "round": false,
+        "truncate": false,
+        "decimals": 0,
+        "decimals2": 0,
+        "x": 630,
+        "y": 1140,
+        "wires": [
+            [
+                "41803e7b242ec4f3"
+            ]
+        ]
+    },
+    {
+        "id": "41803e7b242ec4f3",
+        "type": "calculator",
+        "z": "1c3a74e9f05268d9",
+        "g": "1c994742312f3118",
+        "name": "Calc Overa.",
+        "inputMsgField": "payload",
+        "outputMsgField": "payload",
+        "operation": "mult",
+        "constant": "100",
+        "round": false,
+        "truncate": false,
+        "decimals": 0,
+        "decimals2": 0,
+        "x": 770,
+        "y": 1140,
+        "wires": [
+            [
+                "5a627047d8df2a55"
+            ]
+        ]
+    },
+    {
+        "id": "5a627047d8df2a55",
+        "type": "switch",
+        "z": "1c3a74e9f05268d9",
+        "g": "1c994742312f3118",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "lte",
+                "v": "500",
+                "vt": "num"
+            },
+            {
+                "t": "btwn",
+                "v": "500",
+                "vt": "num",
+                "v2": "4100",
+                "v2t": "num"
+            },
+            {
+                "t": "gt",
+                "v": "4100",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 3,
+        "x": 910,
+        "y": 1140,
+        "wires": [
+            [
+                "a25a0520c3a7e2a4"
+            ],
+            [
+                "12fde68b2d148ea3"
+            ],
+            [
+                "b58d83994f3717c9"
+            ]
+        ],
+        "outputLabels": [
+            null,
+            "below 4100",
+            "over 4100"
+        ]
+    },
+    {
+        "id": "b58d83994f3717c9",
+        "type": "change",
+        "z": "1c3a74e9f05268d9",
+        "g": "1c994742312f3118",
+        "name": "Limit Overa. (4100)",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "4100",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1090,
+        "y": 1160,
+        "wires": [
+            [
+                "12fde68b2d148ea3"
+            ]
+        ],
+        "info": "Limit Overage to 4100 if incoming payload is higher"
+    },
+    {
+        "id": "12fde68b2d148ea3",
+        "type": "api-call-service",
+        "z": "1c3a74e9f05268d9",
+        "g": "1c994742312f3118",
+        "name": "Set Overage",
+        "server": "5828c80558a7bba6",
+        "version": 7,
+        "debugenabled": false,
+        "action": "input_number.set_value",
+        "floorId": [],
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "input_number.pv_uberschuss_schwellwert"
+        ],
+        "labelId": [],
+        "data": "{\"value\": $number(payload)}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "blockInputOverrides": false,
+        "domain": "input_number",
+        "service": "set_value",
+        "x": 1290,
+        "y": 1140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "89b07626ec926b48",
+        "type": "api-current-state",
+        "z": "1c3a74e9f05268d9",
+        "g": "1c994742312f3118",
+        "name": "Minimum Load",
+        "server": "5828c80558a7bba6",
+        "version": 3,
+        "outputs": 1,
+        "halt_if": "",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "entity_id": "input_number.untere_ladegrenze",
+        "state_type": "num",
+        "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entity"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "akkuinfo",
+                "valueType": "str"
+            },
+            {
+                "property": "parts.index",
+                "propertyType": "msg",
+                "value": "1",
+                "valueType": "num"
+            },
+            {
+                "property": "parts.id",
+                "propertyType": "msg",
+                "value": "akkuinfo",
+                "valueType": "str"
+            },
+            {
+                "property": "parts.count",
+                "propertyType": "msg",
+                "value": "2",
+                "valueType": "num"
+            }
+        ],
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "override_topic": false,
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "x": 340,
+        "y": 1200,
+        "wires": [
+            [
+                "175dcbb77a0ed7e5"
+            ]
+        ]
+    },
+    {
+        "id": "175dcbb77a0ed7e5",
+        "type": "join",
+        "z": "1c3a74e9f05268d9",
+        "g": "1c994742312f3118",
+        "name": "",
+        "mode": "auto",
+        "build": "object",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "accumulate": "false",
+        "timeout": "",
+        "count": "",
+        "reduceRight": false,
+        "x": 510,
+        "y": 1140,
+        "wires": [
+            [
+                "976cbbd8f11e5470"
+            ]
+        ]
+    },
+    {
+        "id": "74f81e8f24c74428",
+        "type": "api-current-state",
+        "z": "1c3a74e9f05268d9",
+        "g": "3304eb7deea877f7",
+        "name": "Targettime",
+        "server": "5828c80558a7bba6",
+        "version": 3,
+        "outputs": 1,
+        "halt_if": "",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "entity_id": "input_datetime.ladeziel",
+        "state_type": "str",
+        "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entity"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "akkuinfo",
+                "valueType": "str"
+            },
+            {
+                "property": "parts.index",
+                "propertyType": "msg",
+                "value": "4",
+                "valueType": "num"
+            },
+            {
+                "property": "parts.id",
+                "propertyType": "msg",
+                "value": "akkuinfo",
+                "valueType": "str"
+            },
+            {
+                "property": "parts.count",
+                "propertyType": "msg",
+                "value": "5",
+                "valueType": "num"
+            }
+        ],
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "override_topic": false,
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "x": 290,
+        "y": 600,
+        "wires": [
+            [
+                "c5db831d5180d2ea"
+            ]
+        ]
+    },
+    {
+        "id": "0e7abc553fdac08e",
+        "type": "link out",
+        "z": "1c3a74e9f05268d9",
+        "g": "3304eb7deea877f7",
+        "name": "Override Set - Load Max",
+        "mode": "link",
+        "links": [
+            "628ba2e9d38d3f6a"
+        ],
+        "x": 1345,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "628ba2e9d38d3f6a",
+        "type": "link in",
+        "z": "1c3a74e9f05268d9",
+        "g": "f8b977b19ccfa829",
+        "name": "Schedule Load",
+        "links": [
+            "0e7abc553fdac08e"
+        ],
+        "x": 75,
+        "y": 860,
+        "wires": [
+            [
+                "0df17852a5439594"
+            ]
+        ]
+    },
+    {
+        "id": "e49a6832035a4b45",
+        "type": "function",
+        "z": "1c3a74e9f05268d9",
+        "g": "3304eb7deea877f7",
+        "name": "Check if Override",
+        "func": "// Ladeziel Zeitpunkt kleiner Now()\nif (new Date(msg.payload[4]).getTime() > new Date(Date.now()).getTime() && msg.payload[0] == 0) {\n    return [msg, null];\n} else {\n    return [null, msg];\n}\n",
+        "outputs": 2,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 710,
+        "y": 480,
+        "wires": [
+            [
+                "39d857b39d040c98"
+            ],
+            [
+                "4cfef882b61592bf"
+            ]
+        ]
+    },
+    {
+        "id": "fcd8de0c5ee88fea",
+        "type": "function",
+        "z": "1c3a74e9f05268d9",
+        "g": "3304eb7deea877f7",
+        "name": "Calc. Charging Time",
+        "func": "// Get times\nvar targettime = new Date(msg.payload[4]).getTime();\nvar now = Date.now();\n\n// calcluate datediff in hours\nvar chargingHours = (targettime - now) / 3600000;\nchargingHours = Math.round(chargingHours * 100) / 100; // - 0,1 (~ 5 Minutes) to ensure 100% load at targettime\nflow.set(\"chargingHours\", chargingHours);\n\n// Brutto Akku iX3 80kw\n// Netto Akku iX3 73,9kw\n// Calculate what needs to be loaded\n// Laut ADAC: Um die netto 73,8 kWh große Batterie einmal von komplett leer auf voll zu laden, werden 85,3 kWh benötigt.\nvar remainingCharging = (100 - msg.payload[1]) * 853;\n\n// Claculate new Chargerate + Offset to compensate loss off charge\nvar requiredChargeRate = Math.round(remainingCharging / chargingHours * 100) / 100;\n\nmsg.payload = requiredChargeRate;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 940,
+        "y": 400,
+        "wires": [
+            [
+                "1a72580793177b62"
+            ]
+        ]
+    },
+    {
+        "id": "1a72580793177b62",
+        "type": "switch",
+        "z": "1c3a74e9f05268d9",
+        "g": "3304eb7deea877f7",
+        "name": "Check if Load Required",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "lt",
+                "v": "4100",
+                "vt": "num"
+            },
+            {
+                "t": "gte",
+                "v": "4100",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1170,
+        "y": 400,
+        "wires": [
+            [
+                "6ead64dedc3568b9"
+            ],
+            [
+                "0e7abc553fdac08e"
+            ]
+        ],
+        "outputLabels": [
+            "Nicht laden",
+            "Laden mit Chargerate"
+        ]
+    },
+    {
+        "id": "6ead64dedc3568b9",
+        "type": "link out",
+        "z": "1c3a74e9f05268d9",
+        "g": "3304eb7deea877f7",
+        "name": "Nicht laden",
+        "mode": "link",
+        "links": [
+            "468a9f1e1c5ad905"
+        ],
+        "x": 1345,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "0df17852a5439594",
+        "type": "function",
+        "z": "1c3a74e9f05268d9",
+        "g": "f8b977b19ccfa829",
+        "name": "Calculate Charge Rate (Time)",
+        "func": "var newChargingInW = msg.payload;\n\n// 230V bei 3 Phasig ergibt einen Teilungsfaktor von 69\n// um Ampere in 0,1 Schritten zu bekommen\n// 65 wird gesetzt, damit die Verlustleistung berücksichtigt wird\n// Ansonsten lädt das Fahrzeug zu wenig und ist zum Abfahrzeipunkt nicht voll\nvar newChargeRate = parseInt(newChargingInW / 69);\n\nif (newChargeRate < 60) {\n    msg.payload = 60;\n} else if (newChargeRate > 160) {\n    msg.payload = 160;\n} else {\n    msg.payload = newChargeRate;\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 270,
+        "y": 860,
+        "wires": [
+            [
+                "6191b4229d574023"
+            ]
+        ]
+    },
+    {
+        "id": "900c398447f054e6",
+        "type": "change",
+        "z": "1c3a74e9f05268d9",
+        "g": "68cc5502cd5eb866",
+        "name": "Add Msg Parts",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "Chargerate",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "parts.index",
+                "pt": "msg",
+                "to": "0",
+                "tot": "num"
+            },
+            {
+                "t": "set",
+                "p": "parts.id",
+                "pt": "msg",
+                "to": "Chargerate",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "parts.count",
+                "pt": "msg",
+                "to": "2",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 600,
+        "y": 700,
+        "wires": [
+            [
+                "9e1e5f11813e26db"
+            ]
+        ]
+    },
+    {
+        "id": "056e062ef51ef86c",
+        "type": "api-current-state",
+        "z": "1c3a74e9f05268d9",
+        "g": "68cc5502cd5eb866",
+        "name": "Get current Chargerate",
+        "server": "5828c80558a7bba6",
+        "version": 3,
+        "outputs": 1,
+        "halt_if": "",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "entity_id": "input_number.wb_max_current",
+        "state_type": "num",
+        "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entity"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "Chargerate",
+                "valueType": "str"
+            },
+            {
+                "property": "parts.index",
+                "propertyType": "msg",
+                "value": "1",
+                "valueType": "num"
+            },
+            {
+                "property": "parts.id",
+                "propertyType": "msg",
+                "value": "Chargerate",
+                "valueType": "str"
+            },
+            {
+                "property": "parts.count",
+                "propertyType": "msg",
+                "value": "2",
+                "valueType": "num"
+            }
+        ],
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "override_topic": false,
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "x": 630,
+        "y": 760,
+        "wires": [
+            [
+                "9e1e5f11813e26db"
+            ]
+        ]
+    },
+    {
+        "id": "9e1e5f11813e26db",
+        "type": "join",
+        "z": "1c3a74e9f05268d9",
+        "g": "68cc5502cd5eb866",
+        "name": "",
+        "mode": "auto",
+        "build": "object",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "accumulate": "false",
+        "timeout": "",
+        "count": "",
+        "reduceRight": false,
+        "x": 850,
+        "y": 760,
+        "wires": [
+            [
+                "cb2b19ee03cfdec5"
+            ]
+        ]
+    },
+    {
+        "id": "cb2b19ee03cfdec5",
+        "type": "switch",
+        "z": "1c3a74e9f05268d9",
+        "g": "68cc5502cd5eb866",
+        "name": "Filter non change",
+        "property": "payload[0]",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "neq",
+                "v": "payload[1]",
+                "vt": "msg"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1050,
+        "y": 760,
+        "wires": [
+            [
+                "77b8c36cf02810c4"
+            ]
+        ]
+    },
+    {
+        "id": "945de5a7a1849266",
+        "type": "change",
+        "z": "1c3a74e9f05268d9",
+        "g": "a32415fef288881d",
+        "name": "Add Msg Parts",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "Chargerate",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "parts.index",
+                "pt": "msg",
+                "to": "0",
+                "tot": "num"
+            },
+            {
+                "t": "set",
+                "p": "parts.id",
+                "pt": "msg",
+                "to": "Chargerate",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "parts.count",
+                "pt": "msg",
+                "to": "2",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 700,
+        "y": 960,
+        "wires": [
+            [
+                "bbc5a7480987eb1b"
+            ]
+        ]
+    },
+    {
+        "id": "9d4db56db942f3a5",
+        "type": "api-current-state",
+        "z": "1c3a74e9f05268d9",
+        "g": "a32415fef288881d",
+        "name": "Get current Chargerate",
+        "server": "5828c80558a7bba6",
+        "version": 3,
+        "outputs": 1,
+        "halt_if": "",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "entity_id": "input_number.wb_max_current",
+        "state_type": "num",
+        "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entity"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "Chargerate",
+                "valueType": "str"
+            },
+            {
+                "property": "parts.index",
+                "propertyType": "msg",
+                "value": "1",
+                "valueType": "num"
+            },
+            {
+                "property": "parts.id",
+                "propertyType": "msg",
+                "value": "Chargerate",
+                "valueType": "str"
+            },
+            {
+                "property": "parts.count",
+                "propertyType": "msg",
+                "value": "2",
+                "valueType": "num"
+            }
+        ],
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "override_topic": false,
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "x": 730,
+        "y": 1020,
+        "wires": [
+            [
+                "bbc5a7480987eb1b"
+            ]
+        ]
+    },
+    {
+        "id": "9a6fe14b6fa03736",
+        "type": "change",
+        "z": "1c3a74e9f05268d9",
+        "g": "a32415fef288881d",
+        "name": "Set Chargerate 0",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "0",
+                "tot": "num"
+            },
+            {
+                "t": "set",
+                "p": "ScheduledLoadingActive",
+                "pt": "flow",
+                "to": "0",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 490,
+        "y": 1000,
+        "wires": [
+            [
+                "945de5a7a1849266",
+                "9d4db56db942f3a5"
+            ]
+        ]
+    },
+    {
+        "id": "bbc5a7480987eb1b",
+        "type": "join",
+        "z": "1c3a74e9f05268d9",
+        "g": "a32415fef288881d",
+        "name": "",
+        "mode": "auto",
+        "build": "object",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "accumulate": "false",
+        "timeout": "",
+        "count": "",
+        "reduceRight": false,
+        "x": 930,
+        "y": 1000,
+        "wires": [
+            [
+                "83aac925af65bf77"
+            ]
+        ]
+    },
+    {
+        "id": "83aac925af65bf77",
+        "type": "switch",
+        "z": "1c3a74e9f05268d9",
+        "g": "a32415fef288881d",
+        "name": "Filter non change",
+        "property": "payload[0]",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "neq",
+                "v": "payload[1]",
+                "vt": "msg"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1090,
+        "y": 1000,
+        "wires": [
+            [
+                "745e592996a8907d"
+            ]
+        ]
+    },
+    {
+        "id": "a25a0520c3a7e2a4",
+        "type": "change",
+        "z": "1c3a74e9f05268d9",
+        "g": "1c994742312f3118",
+        "name": "Limit Overa. (500)",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "500",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1090,
+        "y": 1120,
+        "wires": [
+            [
+                "12fde68b2d148ea3"
+            ]
+        ],
+        "info": "Limit Overage to 4100 if incoming payload is higher"
+    },
+    {
+        "id": "ebd99c8b044e88b2",
+        "type": "api-current-state",
+        "z": "1c3a74e9f05268d9",
+        "g": "1c994742312f3118",
+        "name": "iX3 - Akku",
+        "server": "5828c80558a7bba6",
+        "version": 3,
+        "outputs": 1,
+        "halt_if": "",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "entity_id": "sensor.ix3_m_sport_verbleibende_batterie_in_prozent",
+        "state_type": "num",
+        "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entity"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "akkuinfo",
+                "valueType": "str"
+            },
+            {
+                "property": "parts.index",
+                "propertyType": "msg",
+                "value": "0",
+                "valueType": "num"
+            },
+            {
+                "property": "parts.id",
+                "propertyType": "msg",
+                "value": "akkuinfo",
+                "valueType": "str"
+            },
+            {
+                "property": "parts.count",
+                "propertyType": "msg",
+                "value": "2",
+                "valueType": "num"
+            }
+        ],
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "override_topic": false,
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "x": 320,
+        "y": 1140,
+        "wires": [
+            [
+                "175dcbb77a0ed7e5"
+            ]
+        ]
+    },
+    {
+        "id": "14bb34c097ef7efd",
+        "type": "inject",
+        "z": "1c3a74e9f05268d9",
+        "g": "1c994742312f3118",
+        "name": "Trigger",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "60",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 1180,
+        "wires": [
+            [
+                "ebd99c8b044e88b2",
+                "89b07626ec926b48"
+            ]
+        ]
+    },
+    {
+        "id": "39d857b39d040c98",
+        "type": "switch",
+        "z": "1c3a74e9f05268d9",
+        "g": "3304eb7deea877f7",
+        "name": "Check if Loading",
+        "property": "ScheduledLoadingActive",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 710,
+        "y": 400,
+        "wires": [
+            [
+                "fcd8de0c5ee88fea"
+            ]
+        ],
+        "outputLabels": [
+            "Loading"
+        ]
+    },
+    {
+        "id": "19110540400eafcb",
+        "type": "api-call-service",
+        "z": "1c3a74e9f05268d9",
+        "g": "f8b977b19ccfa829",
+        "name": "Set Chargerate",
+        "server": "5828c80558a7bba6",
+        "version": 7,
+        "debugenabled": false,
+        "action": "input_number.set_value",
+        "floorId": [],
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "input_number.wb_max_current"
+        ],
+        "labelId": [],
+        "data": "{\"value\": $number(payload[0])}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "blockInputOverrides": false,
+        "domain": "input_number",
+        "service": "set_value",
+        "x": 760,
+        "y": 860,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6191b4229d574023",
+        "type": "change",
+        "z": "1c3a74e9f05268d9",
+        "g": "f8b977b19ccfa829",
+        "name": "Save ChargeRate",
+        "rules": [
+            {
+                "t": "set",
+                "p": "ScheduledLoadingActive",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 550,
+        "y": 860,
+        "wires": [
+            [
+                "19110540400eafcb"
+            ]
+        ]
+    },
+    {
+        "id": "5828c80558a7bba6",
+        "type": "server",
+        "name": "Home Assistant",
+        "version": 5,
+        "addon": false,
+        "rejectUnauthorizedCerts": false,
+        "ha_boolean": "y|yes|true|on|home|open",
+        "connectionDelay": true,
+        "cacheJson": true,
+        "heartbeat": false,
+        "heartbeatInterval": "30",
+        "areaSelector": "friendlyName",
+        "deviceSelector": "friendlyName",
+        "entitySelector": "friendlyName",
+        "statusSeparator": ": ",
+        "statusYear": "hidden",
+        "statusMonth": "short",
+        "statusDay": "numeric",
+        "statusHourCycle": "default",
+        "statusTimeFormat": "h:m",
+        "enableGlobalContextStore": false
+    }
+]
