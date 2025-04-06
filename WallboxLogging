@@ -1,0 +1,461 @@
+[
+    {
+        "id": "ba2dae9813d8d211",
+        "type": "tab",
+        "label": "Wallbox Ladeprotokoll",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "5ee2271be6b569d1",
+        "type": "group",
+        "z": "ba2dae9813d8d211",
+        "name": "Manual Fix Load Protocol",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "350daf849ec01bbd",
+            "ad6c488077c4734e",
+            "ca3a373b23ba2893",
+            "ed040a6fe974cb98"
+        ],
+        "x": 34,
+        "y": 219,
+        "w": 612,
+        "h": 142
+    },
+    {
+        "id": "61d985bbbaa5ede8",
+        "type": "group",
+        "z": "ba2dae9813d8d211",
+        "name": "Log Wallbox Loading to InfluxDB",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "3b7f240dae606a75",
+            "814cd1e79eb21b6c",
+            "c18941fdd33e98e2",
+            "f5c3f02e3ddf6e59",
+            "16791caf24f4c7bb",
+            "a80849ed045e795c",
+            "d5861e824210ef50",
+            "dff72e936d10aa45"
+        ],
+        "x": 34,
+        "y": 39,
+        "w": 852,
+        "h": 162
+    },
+    {
+        "id": "350daf849ec01bbd",
+        "type": "comment",
+        "z": "ba2dae9813d8d211",
+        "g": "5ee2271be6b569d1",
+        "name": "",
+        "info": "Start:\n{\n    \"time\": \"2024-05-17T19:08:44.153Z\",\n    \"Startzeit\": \"2024-05-17T17:09:45.153Z\",\n    \"Startzähler\": 3430.05\n}\nStop:\n{\n    \"Stopzeit\": \"2024-05-17T19:08:44.893Z\",\n    \"Stopzähler\": 3435.59\n}\n\ntime = Stoptime (aktuelle Zeit -2h)\nStartzeit = aktuelle Zeit -2h\nStopzeit = aktuelle Zeit -2h",
+        "x": 120,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "ca3a373b23ba2893",
+        "type": "inject",
+        "z": "ba2dae9813d8d211",
+        "g": "5ee2271be6b569d1",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"Startzeit\":\"2024-12-05T13:26:37.273Z\",\"Startzähler\":6043.69,\"Stopzeit\":\"2024-12-05T14:39:52.153Z\",\"Stopzähler\":6056.33}",
+        "payloadType": "json",
+        "x": 130,
+        "y": 260,
+        "wires": [
+            [
+                "ad6c488077c4734e"
+            ]
+        ]
+    },
+    {
+        "id": "ad6c488077c4734e",
+        "type": "function",
+        "z": "ba2dae9813d8d211",
+        "g": "5ee2271be6b569d1",
+        "name": "Reformat Msg",
+        "func": "var newmsg = {\n    payload: {\n        \"time\": new Date(msg.payload.Stopzeit),\n        \"Startzeit\": new Date(msg.payload.Startzeit).toLocaleString('de-DE'),\n        \"Startzähler\": msg.payload.Startzähler,\n        \"Stopzeit\": new Date(msg.payload.Stopzeit).toLocaleString('de-DE'),\n        \"Stopzähler\": msg.payload.Stopzähler,\n        \"Ladung (kWh)\": parseFloat((msg.payload.Stopzähler - msg.payload.Startzähler).toFixed(2)),\n        \"Ladezeit (s)\": parseFloat(((new Date(msg.payload.Stopzeit).getTime() - new Date(msg.payload.Startzeit).getTime()) / 1000).toFixed(0)),\n        \"PV Strom (kWh)\": 0\n    }\n}\nreturn newmsg;\n\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 300,
+        "y": 260,
+        "wires": [
+            [
+                "ed040a6fe974cb98"
+            ]
+        ]
+    },
+    {
+        "id": "ed040a6fe974cb98",
+        "type": "influxdb out",
+        "z": "ba2dae9813d8d211",
+        "g": "5ee2271be6b569d1",
+        "influxdb": "7e18b06a61ec57b9",
+        "name": "Wallbox Ladezyklen",
+        "measurement": "Ladezyklen",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "s",
+        "retentionPolicyV18Flux": "",
+        "org": "Home",
+        "bucket": "Wallbox",
+        "x": 520,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "3b7f240dae606a75",
+        "type": "trigger-state",
+        "z": "ba2dae9813d8d211",
+        "g": "61d985bbbaa5ede8",
+        "name": "Charging Start",
+        "server": "5828c80558a7bba6",
+        "version": 5,
+        "inputs": 0,
+        "outputs": 2,
+        "exposeAsEntityConfig": "",
+        "entities": {
+            "entity": [
+                "sensor.esp_evcc_charging_state"
+            ],
+            "substring": [],
+            "regex": []
+        },
+        "debugEnabled": false,
+        "constraints": [
+            {
+                "targetType": "this_entity",
+                "targetValue": "",
+                "propertyType": "current_state",
+                "propertyValue": "new_state.state",
+                "comparatorType": "is",
+                "comparatorValueDatatype": "num",
+                "comparatorValue": "7"
+            },
+            {
+                "targetType": "this_entity",
+                "targetValue": "",
+                "propertyType": "previous_state",
+                "propertyValue": "old_state.state",
+                "comparatorType": "is_not",
+                "comparatorValueDatatype": "num",
+                "comparatorValue": "7"
+            }
+        ],
+        "customOutputs": [],
+        "outputInitially": false,
+        "stateType": "num",
+        "enableInput": false,
+        "x": 130,
+        "y": 80,
+        "wires": [
+            [
+                "f5c3f02e3ddf6e59"
+            ],
+            []
+        ],
+        "outputLabels": [
+            "Start",
+            ""
+        ]
+    },
+    {
+        "id": "814cd1e79eb21b6c",
+        "type": "trigger-state",
+        "z": "ba2dae9813d8d211",
+        "g": "61d985bbbaa5ede8",
+        "name": "Charging Stop",
+        "server": "5828c80558a7bba6",
+        "version": 5,
+        "inputs": 0,
+        "outputs": 2,
+        "exposeAsEntityConfig": "",
+        "entities": {
+            "entity": [
+                "sensor.esp_evcc_charging_state"
+            ],
+            "substring": [],
+            "regex": []
+        },
+        "debugEnabled": false,
+        "constraints": [
+            {
+                "targetType": "this_entity",
+                "targetValue": "",
+                "propertyType": "current_state",
+                "propertyValue": "new_state.state",
+                "comparatorType": "is_not",
+                "comparatorValueDatatype": "num",
+                "comparatorValue": "7"
+            },
+            {
+                "targetType": "this_entity",
+                "targetValue": "",
+                "propertyType": "previous_state",
+                "propertyValue": "old_state.state",
+                "comparatorType": "is",
+                "comparatorValueDatatype": "num",
+                "comparatorValue": "7"
+            }
+        ],
+        "customOutputs": [],
+        "outputInitially": false,
+        "stateType": "num",
+        "enableInput": false,
+        "x": 130,
+        "y": 160,
+        "wires": [
+            [
+                "dff72e936d10aa45"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "c18941fdd33e98e2",
+        "type": "function",
+        "z": "ba2dae9813d8d211",
+        "g": "61d985bbbaa5ede8",
+        "name": "Set Context",
+        "func": "flow.set('Starttime', new Date(Date.now()))\nflow.set('StartcounterWallbox', msg.wallbox)\nflow.set('StartcounterEWE', msg.ewe)\nflow.set('StartAkkuInProzent', msg.bmw)\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 530,
+        "y": 80,
+        "wires": [
+            [
+                "a80849ed045e795c"
+            ]
+        ]
+    },
+    {
+        "id": "f5c3f02e3ddf6e59",
+        "type": "api-current-state",
+        "z": "ba2dae9813d8d211",
+        "g": "61d985bbbaa5ede8",
+        "name": "State Informations",
+        "server": "5828c80558a7bba6",
+        "version": 3,
+        "outputs": 1,
+        "halt_if": "",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "entity_id": "sensor.esp_heizungunten_wallbox_verbrauch_total",
+        "state_type": "num",
+        "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "wallbox",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "ewe",
+                "propertyType": "msg",
+                "value": "$number($entities(\"sensor.esp_heizungunten_aktive_entnommene_energie_a\").state)",
+                "valueType": "jsonata"
+            },
+            {
+                "property": "bmw",
+                "propertyType": "msg",
+                "value": "$number($entities(\"sensor.ix3_m_sport_verbleibende_batterie_in_prozent\").state)",
+                "valueType": "jsonata"
+            }
+        ],
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "override_topic": false,
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "x": 330,
+        "y": 80,
+        "wires": [
+            [
+                "c18941fdd33e98e2"
+            ]
+        ]
+    },
+    {
+        "id": "16791caf24f4c7bb",
+        "type": "function",
+        "z": "ba2dae9813d8d211",
+        "g": "61d985bbbaa5ede8",
+        "name": "Calc Charging",
+        "func": "var startCounterWallbox = flow.get('StartcounterWallbox');\nvar startCounterEWE = flow.get('StartcounterEWE');\nvar startAkku = flow.get('StartAkkuInProzent');\nvar startTime = new Date(flow.get('Starttime'));\n\nvar stopCounterWallbox = msg.wallbox;\nvar stopCounterEWE = msg.ewe;\nvar stopAkku = msg.bmw;\nvar stopTime = new Date(Date.now());\n\nvar ladung = parseFloat((stopCounterWallbox - startCounterWallbox).toFixed(2));\nvar ladeZeit = parseFloat(((stopTime.getTime() - startTime.getTime()) / 1000).toFixed(0));\nvar eweStrom = parseFloat((stopCounterEWE - startCounterEWE).toFixed(2));\nvar pvStrom = parseFloat((ladung - eweStrom).toFixed(2));\n\nif(pvStrom <= 0) {\n   pvStrom = 0;\n}\n\nvar newmsg = {\n    payload: {\n        \"Startzeit\": startTime.toLocaleString('de-DE'),\n        \"Startzähler\": startCounterWallbox,\n        \"Stopzeit\": stopTime.toLocaleString('de-DE'),\n        \"Stopzähler\": stopCounterWallbox,\n        \"Ladung (kWh)\": ladung,\n        \"Ladezeit (s)\": ladeZeit,\n        \"PV Strom (kWh)\": pvStrom,\n        \"Akku zum Ladestart\": startAkku,\n        \"Akku zum Ladestop\": stopAkku\n    }\n};\n\nreturn newmsg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 540,
+        "y": 160,
+        "wires": [
+            [
+                "a80849ed045e795c",
+                "d5861e824210ef50"
+            ]
+        ]
+    },
+    {
+        "id": "a80849ed045e795c",
+        "type": "file",
+        "z": "ba2dae9813d8d211",
+        "g": "61d985bbbaa5ede8",
+        "name": "",
+        "filename": "/data/wallbox.log",
+        "filenameType": "str",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "false",
+        "encoding": "none",
+        "x": 750,
+        "y": 80,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d5861e824210ef50",
+        "type": "influxdb out",
+        "z": "ba2dae9813d8d211",
+        "g": "61d985bbbaa5ede8",
+        "influxdb": "7e18b06a61ec57b9",
+        "name": "Wallbox Ladezyklen",
+        "measurement": "Ladezyklen",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "s",
+        "retentionPolicyV18Flux": "",
+        "org": "Home",
+        "bucket": "Wallbox",
+        "x": 760,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "dff72e936d10aa45",
+        "type": "api-current-state",
+        "z": "ba2dae9813d8d211",
+        "g": "61d985bbbaa5ede8",
+        "name": "State Informations",
+        "server": "5828c80558a7bba6",
+        "version": 3,
+        "outputs": 1,
+        "halt_if": "",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "entity_id": "sensor.esp_heizungunten_wallbox_verbrauch_total",
+        "state_type": "num",
+        "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "wallbox",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "ewe",
+                "propertyType": "msg",
+                "value": "$number($entities(\"sensor.esp_heizungunten_aktive_entnommene_energie_a\").state)",
+                "valueType": "jsonata"
+            },
+            {
+                "property": "bmw",
+                "propertyType": "msg",
+                "value": "$number($entities(\"sensor.ix3_m_sport_verbleibende_batterie_in_prozent\").state)",
+                "valueType": "jsonata"
+            }
+        ],
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "override_topic": false,
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "x": 330,
+        "y": 160,
+        "wires": [
+            [
+                "16791caf24f4c7bb"
+            ]
+        ]
+    },
+    {
+        "id": "7e18b06a61ec57b9",
+        "type": "influxdb",
+        "hostname": "192.168.178.2",
+        "port": "8086",
+        "protocol": "http",
+        "database": "wallbox",
+        "name": "influx2",
+        "usetls": false,
+        "tls": "",
+        "influxdbVersion": "2.0",
+        "url": "http://influxdb:8086",
+        "timeout": "",
+        "rejectUnauthorized": false
+    },
+    {
+        "id": "5828c80558a7bba6",
+        "type": "server",
+        "name": "Home Assistant",
+        "version": 5,
+        "addon": false,
+        "rejectUnauthorizedCerts": false,
+        "ha_boolean": "y|yes|true|on|home|open",
+        "connectionDelay": true,
+        "cacheJson": true,
+        "heartbeat": false,
+        "heartbeatInterval": "30",
+        "areaSelector": "friendlyName",
+        "deviceSelector": "friendlyName",
+        "entitySelector": "friendlyName",
+        "statusSeparator": ": ",
+        "statusYear": "hidden",
+        "statusMonth": "short",
+        "statusDay": "numeric",
+        "statusHourCycle": "default",
+        "statusTimeFormat": "h:m",
+        "enableGlobalContextStore": false
+    }
+]
