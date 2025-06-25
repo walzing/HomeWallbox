@@ -1,4 +1,4 @@
 # HomeWallbox
 Control a Modbus Wallbox via Home Assistant and NodeRed
 
-![image](https://github.com/user-attachments/assets/9f973b81-054c-4979-9916-cbfe5e7b9098)
+![image](https://github.com/user-attachments/assets/93b4be93-d251-4160-b91f-6b577b08b9da)
